@@ -9,7 +9,7 @@ btn.addEventListener("click",()=>{
     let itemName = name.value;
     let itemPrice = Number(price.value);
     total += itemPrice;
-    let tbody = table.querySelector("tbody") || table.appendChild(document.createElement('tbody'));
+    let tbody = table.querySelector("tbody");
     tbody.innerHTML += `
         <tr>
             <td data-ns-test="item-name">${itemName}</td>
