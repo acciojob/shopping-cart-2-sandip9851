@@ -1,5 +1,5 @@
-const name = document.querySelector("#item-name");
-const price = document.querySelector("#item-price");
+const name = document.querySelector("#item-name-input");
+const price = document.querySelector("#item-price-input");
 const table =  document.querySelector("#cart-item");
 const btn = document.querySelector("#btn");
 let total = 0;
@@ -8,7 +8,7 @@ btn.addEventListener("click",()=>{
     let itemName = name.value;
     let itemPrice = Number(price.value); // convert the price to a number
     total += itemPrice;
-    let tbody =  table.appendChild(document.createElement('tbody')); // get the tbody or create one if it doesn't exist
+    let tbody = table.querySelector("tbody") || table.appendChild(document.createElement('tbody')); // get the tbody or create one if it doesn't exist
     tbody.innerHTML += `
         <tr>
             <td data-ns-test="item-name">${itemName}</td>
