@@ -1,2 +1,10 @@
 
 /* Your CSS Code here. */
+#addItemContainer{
+	display:flex;
+	flex-direction:column;
+}
+#addItemContainer, input, button{
+	margin:10px;
+	font-size:20px;
+}
